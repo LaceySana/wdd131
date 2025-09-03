@@ -23,13 +23,14 @@ nav ul {
     background-color: lightgrey;
     display: flex;
     align-items: center;
-    justify-content: center;
-    justify-content: space-around;
+    /* justify-content: center; */
+    /* justify-content: space-around; */
 }
 
 li {
     list-style-type: none;
     padding: 1rem;
+    flex: 1 1 auto;
 }
 
 a {
