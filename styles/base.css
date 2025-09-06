@@ -4,7 +4,7 @@
     --secondary-color: #2e2e33;
     --accent-color-1: #22aaa1;
     --accent-color-2: #EBE2E2;
-    --thin-border: thin, solid, var(--secondary-color)
+    --thin-border: thin solid var(--secondary-color)
 }
 
 * {
@@ -103,26 +103,28 @@ h1 {
     color: var(--secondary-color);
 }
 
-#utah {
-    text-align: center;
-    margin: 1rem;
-}
-
-#utah h3 {
-    border-bottom: var(--thin-border);
-    margin: 1rem;
-}
-
 article figure {
     width: 130px;
     height: auto;
     float: left;
     font-style: italic;
     font-size: smaller;
+    margin-right: 1rem;
 }
 
 figure img {
     width: inherit;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--accent-color-1);
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    padding: 0;
 }
 
 
@@ -137,7 +139,7 @@ figure img {
     font-size: xx-large;
     font-weight: 900;
     box-shadow: 5px 5px 20px var(--secondary-color) inset,
-                -5px -5px 20px var(--secondary-color) inset;
+    -5px -5px 20px var(--secondary-color) inset;
 }
 
 .card {
@@ -155,4 +157,24 @@ figure img {
     float: right;
     margin: 1rem;
     box-shadow: 2px 4px 0.5em var(--secondary-color);
+}
+
+#utah {
+    text-align: center;
+    margin: 1rem;
+}
+
+#utah h3 {
+    border-bottom: var(--thin-border);
+    margin: 1rem;
+}
+
+#lastModified {
+    color: var(--primary-color);
+    font-style: italic;
+    font-size: smaller;
+}
+
+#abt-me {
+    width: 80%;
 }
