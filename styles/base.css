@@ -112,6 +112,10 @@ article figure {
     margin-right: 1rem;
 }
 
+article p {
+    padding-top: 0;
+}
+
 figure img {
     width: inherit;
 }
