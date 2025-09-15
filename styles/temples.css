@@ -2,7 +2,7 @@
     --primary-color: #f00;
     --secondary-color: #fff;
     --accent-color-1: #f55;
-    --accent-color-2: #444;
+    --accent-color-2: #000;
 }
 
 * {
@@ -13,21 +13,39 @@
 
 body {
     background-color: var(--secondary-color);
+    text-align: center;
 }
 
 header {
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    padding: 1rem;
+}
+
+header p {
+    font-size: xx-large;
 }
 
 header nav {
     display: flex;
     flex: 1 1 auto;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color-2);
+}
+
+nav a {
+    padding: 1rem;
+    font-weight: bold;
 }
 
 nav a:hover {
     background-color: var(--accent-color-1);
-    color: var(--accent-color-2);
+    mask-image: radial-gradient(black 50%, transparent 100%);
+    border: black solid thin;
 }
 
 main {
