@@ -31,12 +31,10 @@ header {
     align-items: center;
 }
 
-header p {
+h1 {
     width: fit-content;
-    font-size: xx-large;
     padding: 1rem;
     text-align: left;
-    display: block;
 }
 
 nav {
