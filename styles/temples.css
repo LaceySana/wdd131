@@ -1,0 +1,41 @@
+:root {
+    --primary-color: #f00;
+    --secondary-color: #fff;
+    --accent-color-1: #f55;
+    --accent-color-2: #444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--secondary-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+header nav {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+nav a:hover {
+    background-color: var(--accent-color-1);
+    color: var(--accent-color-2);
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#photo-div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
