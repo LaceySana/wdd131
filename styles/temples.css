@@ -1,7 +1,7 @@
 :root {
-    --primary-color: rgb(0, 174, 255);
+    --primary-color: rgb(0, 175, 255);
     --secondary-color: #fff;
-    --accent-color-1: #f55;
+    --accent-color-1: rgb(60, 200, 255);
     --accent-color-2: #000;
     --border-thin: black solid thin;
     --transparent-border-thin: transparent solid thin;
