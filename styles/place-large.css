@@ -1,0 +1,39 @@
+@media screen and (min-width: 551px) {
+    #weather-icon {
+        display: none;
+    }
+
+    .hero {
+        position: relative;
+    }
+
+    article {
+        width: auto;
+        position: absolute;
+        background-color: var(--accent-color-1);
+        opacity: 90%;
+        box-shadow: 1px 1px 6px 6px rgba(0 0 0 / 0.5);
+        
+    }
+
+    article h2 {
+        display: block;
+        width: auto;
+        padding: 1rem;
+        text-align: left;
+        background-color: var(--secondary-color);
+        color: var(--accent-color-1);
+        translate: -30px;
+        box-shadow: 5px 5px rgba(105, 157, 206, 0.5);
+    }
+
+    #data {
+        top: 10px;
+        left: 20px;
+    }
+
+    #weather {
+        right: 20px;
+        bottom: 10px;
+    }
+}

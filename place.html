@@ -3,14 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <meta name="description" content="">
+    <title>Puerto Rico</title>
+    <meta name="description" content="Snapshot of Puerto Rico">
     <meta name="author" content="Lacey Sanabria">
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css">
     <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Faustina:wght@300..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <h1>Puerto Rico</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture id="hero-img">
+                <source srcset="images/turtles-3.webp" media="(min-width: 1000px)">
+                <source srcset="images/turtles-3.webp" media="(min-width: 550px)">
+                <img src="images/turtles-2-sm.webp" alt="Sea turtles on the coast of Puerto Rico">
+            </picture>
+            <article id="data">
+                <h2>Data</h2>
+                <table>
+                    <tr>
+                        <th>Area:</th>
+                        <td>13,792 km2</td>
+                    </tr>
+                    <tr>
+                        <th>Population:</th>
+                        <td>3,203,295</td>
+                    </tr>
+                    <tr>
+                        <th>Capital:</th>
+                        <td>San Juan</td>
+                    </tr>
+                    <tr>
+                        <th>Languages:</th>
+                        <td>Spanish, English</td>
+                    </tr>
+                    <tr>
+                        <th>Currency:</th>
+                        <td>US Dollar</td>
+                    </tr>
+                    <tr>
+                        <th>Time Zone:</th>
+                        <td>UTC-4</td>
+                    </tr>
+                    <tr>
+                        <th>Calling Code:</th>
+                        <td>+1</td>
+                    </tr>
+                    <tr>
+                        <th>Internet TLD:</th>
+                        <td>.pr</td>
+                    </tr>
+                </table>
+            </article>
+            <article id="weather">
+                <h2>Weather</h2>
+                <img id="weather-icon" src="images/weather-icon.svg" alt="Weather Icon" width="100">
+                <table>
+                    <tr>
+                        <th>Temperature:</th>
+                        <td id="temp"></td>
+                    </tr>
+                    <tr>
+                        <th>Conditions:</th>
+                        <td id="conditions"></td>
+                    </tr>
+                    <tr>
+                        <th>Wind:</th>
+                        <td id="wind-speed"></td>
+                    </tr>
+                    <tr>
+                        <th>Wind Chill:</th>
+                        <td id="wind-chill"></td>
+                    </tr>
+                </table>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <p>©<span id="currentYear"></span> | Lacey Sanabria</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>

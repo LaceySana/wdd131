@@ -1,0 +1,55 @@
+:root {
+    --primary-color: #981700;
+    --secondary-color: #2a2a94; 
+    --accent-color-1: #F3EBCE;
+    --accent-color-2: #000;
+    --heading-font: "Delius", cursive;
+    --body-font: "Faustina", serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    font-family: var(--body-font);
+    background-color: var(--accent-color-1);
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: var(--accent-color-1);
+    padding: 1rem;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+}
+
+#hero-img source+img{
+    width: 100vw;
+    height: auto;
+    border-top: var(--secondary-color) solid 1rem;
+    border-bottom: var(--primary-color) solid 0.5rem;
+}
+
+article {
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+table {
+    margin: 1rem auto;
+    line-height: 1.5rem;
+}
+
+table th {
+    text-align: right;
+}
+
+table td {
+    text-align: left;
+}
