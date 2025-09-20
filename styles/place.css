@@ -43,13 +43,16 @@ article {
 
 table {
     margin: 1rem auto;
-    line-height: 1.5rem;
 }
 
-table th {
+th, td {
+    padding: 5px;
+}
+
+th {
     text-align: right;
 }
 
-table td {
+td {
     text-align: left;
 }
