@@ -1,0 +1,26 @@
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --accent-color-1: #333;
+    --accent-color-2: #bba;
+}
+
+table {
+    background-color: var(--secondary-color);
+}
+
+thead {
+    background-color: var(--primary-color);
+}
+
+th, td {
+    border: thin solid black;
+}
+
+th {
+    background-color: var(--primary-color);
+}
+
+tbody::nth-child {
+    background-color: var(--accent-color-2);
+}
