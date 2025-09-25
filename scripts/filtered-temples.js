@@ -22,7 +22,12 @@ hamButton.addEventListener("click", () => {
     hamButton.classList.toggle("open");
 });
 
-//
+nav.addEventListener("click", () => {
+    nav.classList.toggle("open");
+    hamButton.classList.toggle("open");
+})
+
+// TEMPLE CARDS
 
 const temples = [
   {
@@ -107,8 +112,10 @@ const temples = [
   },
 ];
 
+const templeNameToID = name => name.split(" ").join("-");
+
 const templeCard = temple => 
-    `<div class="temple-card">
+    `<div class="temple-card" id="${templeNameToID(temple.templeName)}">
         <h2>${temple.templeName}</h2>
         <p><span class="label">Location:</span> ${temple.location}</p>
         <p><span class="label">Dedicated:</span> ${temple.dedicated}</p>
@@ -117,3 +124,18 @@ const templeCard = temple =>
     </div>`;
 
 document.querySelector("#photo-div").innerHTML = temples.map(templeCard).join("");
+
+// TEMPLE FILTERING
+
+const oldTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) < 1900);
+oldTemples.forEach(temple => document.getElementById(templeNameToID(temple.templeName)).classList.add("old"));
+
+const newTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) > 2000);
+newTemples.forEach(temple => document.getElementById(templeNameToID(temple.templeName)).classList.add("new"));
+
+const largeTemples = temples.filter(temple => temple.area > 90000);
+largeTemples.forEach(temple => document.getElementById(templeNameToID(temple.templeName)).classList.add("large"));
+
+const smallTemples = temples.filter(temple => temple.area < 10000);
+smallTemples.forEach(temple => document.getElementById(templeNameToID(temple.templeName)).classList.add("small"));
+
