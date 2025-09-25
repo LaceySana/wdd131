@@ -106,3 +106,14 @@ const temples = [
     "https://churchofjesuschristtemples.org/assets/img/temples/san-juan-puerto-rico-temple/san-juan-puerto-rico-temple-48152-main.jpg"
   },
 ];
+
+const templeCard = temple => 
+    `<div class="temple-card">
+        <h2>${temple.templeName}</h2>
+        <p><span class="label">Location:</span> ${temple.location}</p>
+        <p><span class="label">Dedicated:</span> ${temple.dedicated}</p>
+        <p><span class="label">Size:</span> ${temple.area} sq ft</p>
+        <img src="${temple.imageUrl}" alt="Image of ${temple.templeName}" loading="lazy" width="200">
+    </div>`;
+
+document.querySelector("#photo-div").innerHTML = temples.map(templeCard).join("");
