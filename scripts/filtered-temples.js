@@ -115,13 +115,13 @@ const temples = [
 const templeNameToID = name => name.split(" ").join("-");
 
 const templeCard = temple => 
-    `<div class="temple-card" id="${templeNameToID(temple.templeName)}">
+    `<section class="temple-card" id="${templeNameToID(temple.templeName)}">
         <h2>${temple.templeName}</h2>
         <p><span class="label">Location:</span> ${temple.location}</p>
         <p><span class="label">Dedicated:</span> ${temple.dedicated}</p>
         <p><span class="label">Size:</span> ${temple.area} sq ft</p>
         <img src="${temple.imageUrl}" alt="Image of ${temple.templeName}" loading="lazy" width="200">
-    </div>`;
+    </section>`;
 
 document.querySelector("#photo-div").innerHTML = temples.map(templeCard).join("");
 
@@ -139,3 +139,34 @@ largeTemples.forEach(temple => document.getElementById(templeNameToID(temple.tem
 const smallTemples = temples.filter(temple => temple.area < 10000);
 smallTemples.forEach(temple => document.getElementById(templeNameToID(temple.templeName)).classList.add("small"));
 
+const homeLink = document.getElementById("home");
+const oldLink = document.getElementById("old-temples");
+const newLink = document.getElementById("new-temples");
+const largeLink = document.getElementById("large-temples");
+const smallLink = document.getElementById("small-temples");
+const header = document.getElementById("page-header");
+
+homeLink.addEventListener("click", () => {
+  header.textContent = `Home`;
+  document.querySelector("#photo-div").innerHTML = temples.map(templeCard).join("");
+});
+
+oldLink.addEventListener("click", () => {
+  header.textContent = `Home`;
+  document.querySelector("#photo-div").innerHTML = oldTemples.map(templeCard).join("");
+});
+
+newLink.addEventListener("click", () => {
+  header.textContent = `Home`;
+  document.querySelector("#photo-div").innerHTML = newTemples.map(templeCard).join("");
+});
+
+largeLink.addEventListener("click", () => {
+  header.textContent = `Home`;
+  document.querySelector("#photo-div").innerHTML = largeTemples.map(templeCard).join("");
+});
+
+smallLink.addEventListener("click", () => {
+  header.textContent = `Home`;
+  document.querySelector("#photo-div").innerHTML = smallTemples.map(templeCard).join("");
+});

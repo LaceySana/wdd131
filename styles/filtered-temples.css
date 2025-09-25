@@ -109,8 +109,9 @@ figure img {
 
 #photo-div {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 0 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 2rem;
     padding: 2rem;
     margin-top: 4rem;
     justify-content: center;
@@ -119,8 +120,10 @@ figure img {
 
 .temple-card {
     width: 100%;
+    max-width: 400px;
+    height: 100%;
     padding: 1rem;
-    margin: 1rem auto;
+    margin: auto;
     text-align: center;
     background-color: var(--accent-color-1);
     border: var(--border-thin);
@@ -134,7 +137,7 @@ figure img {
 }
 
 .temple-card p {
-    margin: 1rem;
+    margin: 1rem 0;
 }
 
 .label {
