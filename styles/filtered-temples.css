@@ -1,0 +1,118 @@
+:root {
+    --primary-color: rgb(0, 175, 255);
+    --secondary-color: #fff;
+    --accent-color-1: rgb(60, 200, 255);
+    --accent-color-2: #000;
+    --border-thin: black solid thin;
+    --transparent-border-thin: transparent solid thin;
+    --sans-font: "Roboto", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--secondary-color);
+    text-align: center;
+    font-family: var(--sans-font);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--accent-color-2);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 2fr 0.5fr;
+    align-items: center;
+}
+
+h1 {
+    width: fit-content;
+    padding: 1rem;
+    text-align: left;
+}
+
+nav {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-around;
+    margin: 2rem 3rem 0.5rem 1rem;
+    flex-direction: column;
+}
+
+a {
+    display: none;
+    text-decoration: none;
+    color: var(--accent-color-2);
+}
+
+nav a {
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    border: var(--transparent-border-thin);
+}
+
+nav a:hover {
+    background-color: var(--accent-color-1);
+    mask-image: radial-gradient(black 50%, transparent 100%);
+    -webkit-mask-image: radial-gradient(black 50%, transparent 100%);
+    border: var(--border-thin);
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+footer {
+    margin: 1rem;
+    border-top: var(--thin-border);
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* || CLASS SELECTORS */
+
+.open a {
+    display: block;
+}
+
+/* || ID SELECTORS */
+
+#menu {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color-2);
+    border: none;
+    background: none;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✖";
+}
+
+#photo-div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    padding: 2rem;
+    margin-top: 5rem;
+    justify-content: center
+}
+
