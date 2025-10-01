@@ -9,7 +9,7 @@ chaptersSet.forEach(chapter => displayList(chapter));
 
 addButton.addEventListener("click", () => {
     if (input.value !== "") {
-        displayList(input.value);
+        !chaptersSet.has(input.value) && displayList(input.value);
         chaptersSet.add(input.value);
         setChapterList();
         input.value = "";
@@ -33,12 +33,12 @@ function displayList(item) {
     });
 };
 
-function setChapterList(array) {
-    localStorage.setItem("favChaptersList", JSON.stringify(chaptersSet));
+function setChapterList() {
+    localStorage.setItem("favChaptersList", JSON.stringify(Array.from(chaptersSet)));
 };
 
 function getChapterList() {
-    return Set(JSON.parse(localStorage.getItem("favChaptersList")));
+    return new Set(JSON.parse(localStorage.getItem("favChaptersList")));
 };
 
 function deleteChapter(chapter) {
