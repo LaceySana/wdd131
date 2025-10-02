@@ -1,0 +1,118 @@
+:root {
+    --golden-brown: #9C6430;
+    --deep-purple: #250F0F;
+    --beige: #D5AA72;
+    --mid-brown: #69371B;
+    --apple-green: #8E9B16;
+    --cursive-font: "Cherish", cursive;
+    --serif-font: "Wellfleet", serif;
+    --sans-serif-font: "Faculty Glyphic", sans-serif;
+    --thick-border: thick solid var(--deep-purple);
+    --green-border-accent: 3px solid var(--apple-green);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--sans-serif-font);
+    color: var(--deep-purple);
+}
+
+header {
+    padding: 1rem 1rem 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: var(--beige);
+    align-items: center;
+    text-align: center;
+    line-height: 3rem;
+    border-bottom: var(--green-border-accent);
+}
+
+h1, h2, h3 {
+    font-family: var(--serif-font);
+}
+
+h1 .cursive{
+    font-size: 2.5em;
+}
+
+main {
+    padding: 1rem;
+    background-color: var(--golden-brown);
+    border-top: var(--thick-border);
+    border-bottom: var(--thick-border);
+}
+
+section {
+    margin: 1rem;
+    padding: 1.5rem;
+    background-color: var(--beige);
+    border: var(--thick-border);
+    border-radius: 15px;
+    box-shadow: 1px 1px 15px 10px var(--mid-brown) inset;
+}
+
+li {
+    list-style: circle;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--beige);
+    border-top: var(--green-border-accent);
+}
+
+/* Class Rules */
+
+.golden-brown {
+    color: var(--golden-brown);
+}
+
+.deep-purple {
+    color: var(--deep-purple);
+}
+
+.beige {
+    color: var(--beige);
+}
+
+.mid-brown {
+    color: var(--mid-brown);
+}
+
+.apple-green {
+    color: var(--apple-green);
+}
+
+.cursive {
+    font-family: var(--cursive-font);
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.serif {
+    font-family: var(--serif-font);
+}
+
+.sans-serif {
+    font-family: var(--sans-serif-font);
+}
+
+.small-text {
+    font-size: 60%;
+}
+
+.dark-outline {
+    text-shadow: 
+    1px 1px 2px var(--golden-brown),
+    2px 2px 1px var(--deep-purple),
+    -2px -2px 1px var(--deep-purple),
+    -1px 1px 1px var(--deep-purple),
+    5px 5px 3px var(--golden-brown);
+}
