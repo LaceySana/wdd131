@@ -2,6 +2,7 @@
     --golden-brown: #9C6430;
     --deep-purple: #250F0F;
     --beige: #D5AA72;
+    /* --light-beige: #ffd8a6; */
     --mid-brown: #69371B;
     --apple-green: #8E9B16;
     --cursive-font: "Cherish", cursive;
@@ -43,18 +44,21 @@ h1 .cursive{
 
 main {
     padding: 1rem;
+    margin: auto;
     background-color: var(--golden-brown);
+    /* background-image: linear-gradient(to bottom, var(--golden-brown), var(--light-beige)); */
     border-top: var(--thick-border);
     border-bottom: var(--thick-border);
 }
 
 section {
-    margin: 1rem;
+    margin: 1rem auto;
     padding: 1.5rem;
     background-color: var(--beige);
     border: var(--thick-border);
     border-radius: 15px;
     box-shadow: 1px 1px 15px 10px var(--mid-brown) inset;
+    max-width: 1000px;
 }
 
 li {
@@ -90,6 +94,14 @@ footer {
     color: var(--apple-green);
 }
 
+.dark-outline {
+    text-shadow: 
+    1px 1px 1px var(--deep-purple),
+    -1px 1px 1px var(--deep-purple),
+    1px -1px 1px var(--deep-purple),
+    -1px -1px 1px var(--deep-purple);
+}
+
 .cursive {
     font-family: var(--cursive-font);
     font-size: xx-large;
@@ -108,7 +120,7 @@ footer {
     font-size: 60%;
 }
 
-.dark-outline {
+.header-outline {
     text-shadow: 
     1px 1px 2px var(--golden-brown),
     2px 2px 1px var(--deep-purple),
