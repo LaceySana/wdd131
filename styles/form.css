@@ -33,17 +33,14 @@ main {
     border-radius: 10%;
 }
 
-div {
+div, fieldset {
+    border: none;
     margin: 2rem 1rem;
-    text-align: center;
-}
-
-form div {
-    text-align: left;
 }
 
 label, legend {
     display: block;
+    font-weight: bold;
 }
 
 select,
@@ -82,6 +79,7 @@ input[type="checkbox"] {
 
 .features label {
     display: inline;
+    font-weight: normal;
 }
 
 input[type="text"],
