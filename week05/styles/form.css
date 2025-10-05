@@ -1,6 +1,7 @@
 :root {
     --primary-color: #0a9;
     --secondary-color: #999;
+    --main-font: "Roboto", sans-serif;
 }
 
 * {
@@ -11,6 +12,7 @@
 
 body {
     max-width: 800px;
+    font-family: var(--main-font);
 }
 
 header, footer {
@@ -50,10 +52,17 @@ textarea {
     margin: 0.5rem 0;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="radio"] {
+    justify-self: center;
 }
 
 .stars label {
-    margin: auto;
+    margin: 0.5rem;
+    font-size: x-small;
     text-align: center;
 }
 
