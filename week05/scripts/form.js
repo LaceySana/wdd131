@@ -25,3 +25,17 @@ const products = [
     averagerating: 5.0
   }
 ];
+
+const productSelect = document.getElementById("product");
+
+function populateSelectElem(list, selectElem) {
+  list.forEach(product => {
+    let option = document.createElement("option");
+    option.setAttribute("value", product.id);
+    option.textContent = product.name;
+    selectElem.append(option);
+  });
+}
+
+populateSelectElem(products, productSelect);
+

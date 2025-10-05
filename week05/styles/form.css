@@ -11,7 +11,6 @@
 }
 
 body {
-    max-width: 800px;
     font-family: var(--main-font);
 }
 
@@ -22,14 +21,21 @@ header, footer {
 }
 
 main {
+    max-width: 600px;
+    margin: auto;
     background-color: var(--secondary-color);
     border-top: solid 2rem #fff;
     border-bottom: solid 2rem #fff;
-    border-radius: 6%;
+    border-radius: 10%;
 }
 
 div {
     margin: 2rem 1rem;
+    text-align: center;
+}
+
+form div {
+    text-align: left;
 }
 
 label, legend {
@@ -54,6 +60,7 @@ textarea {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    justify-content: space-around;
 }
 
 input[type="radio"] {
@@ -61,7 +68,6 @@ input[type="radio"] {
 }
 
 .stars label {
-    margin: 0.5rem;
     font-size: x-small;
     text-align: center;
 }
