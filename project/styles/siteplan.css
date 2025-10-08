@@ -9,6 +9,7 @@
     --serif-font: "Wellfleet", serif;
     --sans-serif-font: "Faculty Glyphic", sans-serif;
     --thick-border: thick solid var(--deep-purple);
+    --thin-border: 3px solid var(--deep-purple);
     --green-border-accent: 3px solid var(--pale-green);
 }
 
@@ -66,6 +67,17 @@ section {
 
 li {
     list-style: circle;
+}
+
+a {
+    margin: 5%;
+    padding: 0.2rem;
+    line-height: 3rem;
+    text-decoration: none;
+    color: var(--deep-purple);
+    background-color: var(--pale-green);
+    border: var(--thin-border);
+    border-radius: 10px;
 }
 
 footer {
