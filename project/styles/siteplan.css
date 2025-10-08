@@ -1,15 +1,15 @@
 :root {
-    --golden-brown: #9C6430;
-    --deep-purple: #250F0F;
-    --beige: #D5AA72;
-    /* --light-beige: #ffd8a6; */
-    --mid-brown: #69371B;
-    --apple-green: #8E9B16;
+    --golden-brown: #9c6430;
+    --deep-purple: #250f0f;
+    --beige: #ddb98b;
+    --light-beige: #ffd9b5;
+    --mid-brown: #69371b;
+    --pale-green: #b1ba9d;
     --cursive-font: "Cherish", cursive;
     --serif-font: "Wellfleet", serif;
     --sans-serif-font: "Faculty Glyphic", sans-serif;
     --thick-border: thick solid var(--deep-purple);
-    --green-border-accent: 3px solid var(--apple-green);
+    --green-border-accent: 3px solid var(--pale-green);
 }
 
 * {
@@ -23,15 +23,18 @@ body {
     color: var(--deep-purple);
 }
 
+header, footer {
+    text-align: center;
+    background-color: var(--pale-green);
+
+}
+
 header {
     padding: 1rem 1rem 2rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    background-color: var(--beige);
     align-items: center;
-    text-align: center;
     line-height: 3rem;
-    border-bottom: var(--green-border-accent);
 }
 
 h1, h2, h3 {
@@ -45,7 +48,7 @@ h1 .cursive{
 main {
     padding: 1rem;
     margin: auto;
-    background-color: var(--golden-brown);
+    background-color: var(--light-beige);
     /* background-image: linear-gradient(to bottom, var(--golden-brown), var(--light-beige)); */
     border-top: var(--thick-border);
     border-bottom: var(--thick-border);
@@ -67,9 +70,6 @@ li {
 
 footer {
     padding: 1rem;
-    text-align: center;
-    background-color: var(--beige);
-    border-top: var(--green-border-accent);
 }
 
 /* Class Rules */
@@ -86,12 +86,16 @@ footer {
     color: var(--beige);
 }
 
+.light-beige {
+    color: var(--light-beige);
+}
+
 .mid-brown {
     color: var(--mid-brown);
 }
 
-.apple-green {
-    color: var(--apple-green);
+.pale-green {
+    color: var(--pale-green);
 }
 
 .dark-outline {
