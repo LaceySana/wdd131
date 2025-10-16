@@ -9,7 +9,9 @@
     --serif-font: "Wellfleet", serif;
     --sans-serif-font: "Faculty Glyphic", sans-serif;
     --thick-border: thick solid var(--deep-purple);
+    --thick-border-pop: thick solid var(--pale-green);
     --thin-border: 2px solid var(--deep-purple);
+    --thin-border-pop: 2px solid var(--pale-green);
     --green-border-accent: 3px solid var(--pale-green);
 }
 
@@ -23,11 +25,12 @@ body {
     font-family: var(--sans-serif-font);
     color: var(--deep-purple);
     width: 100%;
+    min-height: 100vh;
+    text-align: center;
 }
 
 header, footer {
     padding: 1rem;
-    text-align: center;
     background-color: var(--pale-green);
 }
 
@@ -57,7 +60,7 @@ header img {
     line-height: 3rem;
 }
 
-h1, h2, h3 {
+h1, h2, h3, legend {
     font-family: var(--serif-font);
 }
 
@@ -81,10 +84,13 @@ a {
     font-weight: bold;
 }
 
+nav a {
+    padding: 0.5rem;
+}
+
 nav a:hover {
     outline: var(--thin-border);
-    outline-offset: 0.5rem;
-    border-radius: 10%;
+    border-radius: 10px;
 }
 
 main {
@@ -94,6 +100,7 @@ main {
     /* background-image: linear-gradient(to bottom, var(--golden-brown), var(--light-beige)); */
     border-top: var(--thick-border);
     border-bottom: var(--thick-border);
+    min-height: 63vh;
 }
 
 
@@ -144,6 +151,61 @@ figure img {
 
 footer {
     font-size: smaller;
+}
+
+/* Form Design */
+
+form {
+    margin: 2rem;
+    text-align: left;
+}
+
+form p {
+    border: var(--thin-border);
+    outline: var(--thick-border-pop);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 3rem;
+    text-align: center;
+}
+
+form > fieldset > legend {
+    font-size: x-large;
+}
+
+fieldset {
+    border: var(--thick-border);
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"]
+{
+    display: block;
+    padding: 0.2em;
+    margin: 0.3rem 0.5rem 1rem;
+    border-radius: 3px;
+}
+
+input:required {
+    border-left: solid thick red;
+}
+
+input:required:valid {
+    border-left: solid thick green;
+}
+
+input[type="checkbox"] {
+    margin: 0.5rem;
+}
+
+input[type="submit"] {
+    margin: 1rem;
+    padding: 0.5rem;
+    font-size: larger;
+    font-family: var(--serif-font);
 }
 
 /* Class Rules */
@@ -213,16 +275,18 @@ footer {
 
 
 
-/*  */
+/* ID Selectors */
 
 #how-to-help {
-    margin: 1rem;
+    margin: 1.5rem 1rem 0;
     display: grid;
     grid-template-columns: 1fr;
+    gap: 0 2rem;
 }
 
-#how-to-help button, #how-to-help p {
+#how-to-help p {
     margin: 1rem;
+    text-align: justify;
 }
 
 #menu {

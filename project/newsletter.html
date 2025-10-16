@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>All Things Wild Cats - Home</title>
+    <meta name='description' content='Home Page for All Things Wild Cats website.'>
+    <meta name='author' content='Lacey Sanabria'>
+    <link rel='stylesheet' href='styles/wildcats.css'>
+    <link rel='stylesheet' href='styles/wildcats-large.css'>
+    <script src='scripts/wildcats.js' defer></script>
+    <script src='../scripts/getdates.js' defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherish&family=Faculty+Glyphic&family=Wellfleet&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="branding">
+            <h1><span class="small-text">All Things</span><br><span class="cursive mid-brown header-outline">Wild Cats</span></h1>
+            <img src="images/logo-2.webp" alt="All things wild cat logo. Two cartoonish big cats.">
+        </div>
+        <button id="menu" title="menu-toggle"></button>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="">Cats</a>
+            <a href="">Conservations</a>
+            <a href="newsletter.html">Newsletter</a>
+        </nav>
+    </header>
+    <main>
+        <form action="newsletter-confirmation.html">
+            <fieldset>
+                <legend>Newsletter Sign Up</legend>
+                <p>Want to stay in the know about wild cats? Sign up to receive our weekly newsletter to get all the latest wild-cat news.</p>
+                <label for="fname">First Name: </label>
+                <input type="text" name="fname" id="fname" required>
+                <label for="lname">Last Name: </label>
+                <input type="text" name="lname" id="lname"required>
+                <label for="email">Email Address: </label>
+                <input type="email" name="email" id="email" required>
+                <label for="phone">Phone Number: </label>
+                <input type="tel" name="phone" id="phone">
+                <fieldset>
+                    <legend>What news would you like to receive?</legend>
+                    <label><input type="checkbox" name="newsType" checked> Wild Cat Fun Facts</label><br>
+                    <label><input type="checkbox" name="newsType" checked> Endangered Species Updates</label><br>
+                    <label><input type="checkbox" name="newsType" checked> New Conservation Efforts</label><br>
+                </fieldset>
+                <input type="submit" value="Sign Up">
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>©️ <span id='currentYear'></span> | Lacey Sanabria</p>
+        <p id='lastModified'></p>
+    </footer>
+</body>
+
+</html>
